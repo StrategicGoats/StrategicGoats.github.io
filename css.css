@@ -72,6 +72,19 @@ ul {
 	height:100%
 }
 
+main #faq h1,h4,p{
+	font-family: 'caviarDreamsBold';
+}
+
+#faq h1,h4{
+	font-weight:bold;
+	
+}
+
+#faq h4{
+	font-size:25px;
+}
+
 li {
 	float: left;
     display: block;
@@ -91,9 +104,7 @@ li img{
 	vertical-align:top;
 }
 
-#faq{
-	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-}
+
 
 
 #main_section{
