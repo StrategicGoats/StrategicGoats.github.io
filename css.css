@@ -1,0 +1,357 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@font-face{
+	font-family: "caviarDreamsBold";
+	src: url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.eot");
+	src: 
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.woff")format("woff"),
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.svg")format("svg"),
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.otf")format("otf");
+
+}
+html{
+	width:100%;
+	margin:0 auto;
+}
+
+body{
+	margin: 0 auto;
+	background-color:#FFFFFF;
+	font-family: 'caviarDreamsBold', Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#intro {
+	color: #255;
+	margin: 0 auto;
+	height:700px;
+	width:100%;
+	background-image: url("world.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+#text {
+	font-size:50px;
+	color:white;
+	margin: 0 auto;
+	width:100%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 600px; 
+}
+
+#intro #text p{
+	margin:0 auto;
+}
+
+#whoarewe{
+	text-align:center;
+}
+nav{
+	height:50px;
+	position:relative;
+	z-index: 1;
+	width:100%;
+	vertical-align:top;
+	margin: 0 auto;	
+}
+
+li {
+	padding-right:10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    width:100%;
+	height:100%
+}
+
+li {
+	float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+	font-size: 15px;
+}
+
+li, li:hover, li:active, li:visited, li:focus{
+	text-decoration:none;
+}
+
+li img{
+	height:60px;
+	width:300px;
+	vertical-align:top;
+}
+
+#faq{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+#main_section{
+	height:400px;
+	width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align:middle;
+	font-size:20px;
+	padding-top:30px;
+ 
+}
+
+h2{
+	text-align:center;
+	position:center;
+	color: black;
+}
+
+img { 
+   position: relative; 
+   width: 100%; 
+}
+
+ .body{
+	position:center;
+ }
+ 
+.footer{
+	
+	background-color:#383838;
+	width:100%;
+	color:white;
+}
+
+.footer #copy p{
+	padding-top:5px;
+}
+
+#name{
+	border-radius:4px;
+}
+
+#main{
+	color:black;
+}
+	
+footer #copy{
+	text-align: center;
+	height:80px;	
+}
+
+#pictures{
+	width:180px;
+	height:160px;
+	margin:0 auto;
+	padding-bottom:15px;
+}
+
+h3{
+	text-align:center;
+}
+
+tr #pictures img{
+	height:180px;
+	width:180px;
+}
+
+#para {
+	padding-bottom:20px;
+	text-align:center;
+}
+
+th{
+	font-weight:normal;
+	width:30%;
+}
+
+#download{
+	margin: 0 auto;
+	height:600px;
+	width:100%;
+	background-image: url("map.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	display:flex;
+	align-items:center;
+}
+
+#download button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+
+#download button a:hover, .offcanvas a:focus{
+	color: #ffffff;
+}
+
+h1{
+	text-align:center;
+	margin:0 auto;
+}
+
+#team{
+	height:600px;
+	width:100%;
+	background-image:url("team.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	line-height:600px;
+	vertical-align:middle;
+	text-align:center;
+	color:white;
+	font-size:35px;
+}
+
+#table{
+	padding-top:20px;
+}
+
+#table2 {
+	width:10%;
+	padding:0px;
+}
+
+.containertable #table3 {
+	width:90%;
+}
+
+#opinion{
+	font-size:25px;
+	text-align:center;
+	padding:15px;	
+}
+
+.containertable{
+	width:80%;
+	display:flex;
+	flex-wrap:wrap;
+	margin:0 auto;
+	height:230px;
+}
+
+.containertable td{
+	padding-top:10px;
+	padding-bottom:10px;
+	height:10px;
+}
+
+.reviewsection{
+	padding-bottom:20px;
+}
+
+.containertable #table2 table tr{
+	padding:0px;
+	height:2px;
+	
+}
+
+.containertable #table2 table tr h3{
+	padding-bottom:10px;
+	height:2px;
+	margin:0px;
+	
+}
+
+#map iframe{
+	margin:0 auto;
+	align-items:middle;
+}
+
+#faq{
+	height:500px;
+}
+
+#faq h1{
+	padding-top:30px;
+}
+
+#faq p, h4{
+	margin-left:30px;
+	font-size:20px;
+}
+
+.containertable td{
+	font-size:20px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #ff0000;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Zoom In #1 */
+.hover01 div img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 div:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}

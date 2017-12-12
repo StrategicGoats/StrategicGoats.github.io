@@ -1,0 +1,13 @@
+{
+  "rules":{
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "media-feature-name-no-unknown": true,
+    "at-rule-no-unknown": true,
+    "block-no-empty": true,
+    "block-opening-brace-space-before": always,
+  }
+}
