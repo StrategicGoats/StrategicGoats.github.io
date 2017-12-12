@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #main-header {
   display: flex;
   align-items: center;
@@ -174,4 +175,97 @@ h1 {
   display: block;
   margin: 0 auto 10px;
 }
+>>>>>>> Hannah
+=======
+#main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+#join-up-message {
+  height: 500px;
+  background-color: #eee;
+  text-align: center;
+}
+
+#join-up-message h2 {
+  padding-top: 200px;
+}
+
+#benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#benefits h2 {
+  width: 100%;
+}
+
+.benefit {
+  width: 30%;
+}
+
+.benefit i {
+  font-size: 36px;
+}
+.benefit p {
+  text-align: justify;
+}
+
+#testimonials {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#testimonials h2 {
+  text-align: center;
+  width: 100%;
+}
+
+#testimonials blockquote {
+  width: 47%;
+  margin: 16px 0;
+  text-align: justify;
+}
+
+#testimonials blockquote p {
+  font-style: italic;
+}
+
+#testimonials blockquote footer {
+  color: #444;
+}
+
+#testimonials blockquote footer::before {
+  content: "- "
+}
+
+#sign-up {
+  padding-top:200px;
+  background-color: #eee;
+  height: 300px;
+}
+
+#sign-up input {
+  display: block;
+  margin: 0 auto 10px;
+}
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/Hannah
+=======
+>>>>>>> master
+>>>>>>> Hannah
