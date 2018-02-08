@@ -15,7 +15,7 @@ html{
 
 body{
 	margin: 0 auto;
-	background-color:#FFFFFF;
+	background-color:#FFF;
 	font-family: 'caviarDreamsBold', Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -77,30 +77,10 @@ main #faq h1,h4,p{
 
 #faq h1,h4{
 	font-weight:bold;
-	
 }
 
 #faq h4{
 	font-size:25px;
-}
-
-li {
-	float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-	font-size: 15px;
-}
-
-li, li:hover, li:active, li:visited, li:focus{
-	text-decoration:none;
-}
-
-li img{
-	height:60px;
-	width:300px;
-	vertical-align:top;
 }
 
 #main_section{
@@ -117,6 +97,13 @@ h2{
 	text-align:center;
 	position:center;
 	color: black;
+}
+
+#listy{
+	text-align:left;
+	
+	width:38%;
+	margin:0 auto;
 }
 
 img { 
@@ -416,3 +403,10 @@ h1{
 .hover01 div:hover img {
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
+
+}
+
+#blog2 li{
+	color:black;
+	display:block;
+}
