@@ -246,6 +246,15 @@ h1{
 	padding-bottom:50px;
 }
 
+#blog5{
+	margin:0 auto;
+	font-size:20px;
+	align-items:center;
+	width:80%;
+	padding-bottom:50px;
+	text-align:center;
+}
+
 #blog4 li{
 	font-size:20px;
 	margin:0 auto;
