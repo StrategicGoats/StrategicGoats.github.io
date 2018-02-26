@@ -379,6 +379,10 @@ h1{
 	font-size:20px;
 }
 
+#teamLogo {
+	float: right;
+}
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */

@@ -20,9 +20,14 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" type="text/css" href="css.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<title> Strategic Goats - Blog </title>
 	</head>
 	<body>
+		<div class="top" id="linkToTop">
+
+		</div>
+
 		<div id="mySidenav" class="sidenav">
 	  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  		<a href="index.html">Home</a>
@@ -31,14 +36,15 @@
 		</div>
 
 	<!-- Use any element to open the sidenav -->
-		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<font color="#000000"><img src="goatLogo.jpg" alt="Menu" style="width:100px;height:84px"></font></span>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<font color="#000000"></font>
+		</span>
 
 		<div id="bloggy">
 			<h1> Blog </h1>
 		</div>
 <main>
 <div id="main_section">
-				<p>Good morning people of the world! We are the Strategic Goats aka Team 5 of CS2010. 
+				<p>Hello people of the world! We are the Strategic Goats aka Team 5 of CS2010. 
 				This is our very first blog post in which we introduce to you our virtual board game! 
 				Tun, Tun Tuunnn! 
 				So, without further ado we introduce to you *ominous music* Peril!! </p>
@@ -173,6 +179,10 @@
 						<p>Strategic Goats &#169</p>
 						<p>strategicgoats@outlook.com</p>
 					</div>
+
+					<div id="teamLogo" class="logo"> 
+						<a href="#linkToTop"><img src="goatLogo.jpg" alt="Reset" style="width:80px;height:64px"></a>
+					</div>
 				</div>
 			</footer>
 
@@ -184,6 +194,33 @@
 			function closeNav() {
 	    		document.getElementById("mySidenav").style.width = "0";
 			}
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			  // Add smooth scrolling to all links
+			  $("a").on('click', function(event) {
+
+			    // Make sure this.hash has a value before overriding default behavior
+			    if (this.hash !== "") {
+			      // Prevent default anchor click behavior
+			      event.preventDefault();
+
+			      // Store hash
+			      var hash = this.hash;
+
+			      // Using jQuery's animate() method to add smooth page scroll
+			      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 800, function(){
+			   
+			        // Add hash (#) to URL when done scrolling (default click behavior)
+			        window.location.hash = hash;
+			      });
+			    } // End if
+			  });
+			});
 		</script>
 
 	</body>
