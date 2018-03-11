@@ -249,19 +249,33 @@ h1{
 	padding-bottom:50px;
 }
 
-#blog5{
+#blog5, #blog6{
 	margin:0 auto;
 	font-size:20px;
 	align-items:center;
 	width:80%;
 	padding-bottom:50px;
 	text-align:center;
+	padding-top:50px;
 }
 
 #blog4 li{
 	font-size:20px;
 	margin:0 auto;
 	align-items:center;
+}
+
+#blog6 li{
+	font-size:20px;
+	margin:0 auto;
+	align-items:center;
+}
+
+#blog6 ol, ul{
+	
+    text-align: center;
+    list-style-position: inside;
+
 }
 
 #blog4 ul{
