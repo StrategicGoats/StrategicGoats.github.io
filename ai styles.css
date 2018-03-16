@@ -19,18 +19,6 @@ body{
 	font-family: 'caviarDreamsBold', Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-#intro {
-	color: #255;
-	margin: 0 auto;
-	height:700px;
-	width:100%;
-	background-image: url("images/world.jpg");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 #text {
 	font-size:50px;
 	color:white;
@@ -41,13 +29,6 @@ body{
 	line-height: 600px; 
 }
 
-#intro #text p{
-	margin:0 auto;
-}
-
-#whoarewe{
-	text-align:center;
-}
 nav{
 	height:50px;
 	position:relative;
@@ -61,23 +42,17 @@ li {
 	padding-right:10px;
 }
 
-main #faq h1,h4,p{
-	font-family: 'caviarDreamsBold';
-}
-
-#faq h1,h4{
+.section h1,h4{
 	font-weight:bold;
 }
 
-#faq h4{
+.section h4{
 	font-size:25px;
 }
 
-#faq{
+.section{
 	width:80%;
-	
 	margin:0 auto;
-	
 }
 
 #main_section{
@@ -94,13 +69,6 @@ h2{
 	text-align:center;
 	position:center;
 	color: black;
-}
-
-#listy{
-	text-align:left;
-	
-	width:38%;
-	margin:0 auto;
 }
 
 img { 
@@ -157,36 +125,6 @@ tr #pictures img{
 	text-align:center;
 }
 
-th{
-	font-weight:normal;
-	width:30%;
-}
-
-#download{
-	margin: 0 auto;
-	height:600px;
-	width:100%;
-	background-image: url("images/map.jpg");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	display:flex;
-	align-items:center;
-}
-
-#download button{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 50px;
-	margin: 0 auto;
-	border-radius: 8px;
-}
-
 #download button a:hover, .offcanvas a:focus{
 	color: #ffffff;
 }
@@ -194,36 +132,6 @@ th{
 h1{
 	text-align:center;
 	margin:0 auto;
-}
-
-#team{
-	height:600px;
-	width:100%;
-	background-image:url("images/team.jpg");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	line-height:600px;
-	vertical-align:middle;
-	text-align:center;
-	color:white;
-	font-size:35px;
-}
-
-#bloggy{
-	height:600px;
-	width:100%;
-	background-image:url("images/Travel-Blog.jpg");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	line-height:600px;
-	vertical-align:middle;
-	text-align:center;
-	color:white;
-	font-size:35px;
 }
 
 #ai{
@@ -241,137 +149,8 @@ h1{
 	font-size:35px;
 }
 
-#blog1{
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	vertical-align:middle;
-	font-size:20px;
-	padding-top:30px;
-	padding-bottom:20px;
-}
-
-#blog2{
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	vertical-align:middle;
-	font-size:20px;
-	padding-top:30px;
-	padding-bottom:20px;
-}
-
-#blog4{
-	text-align:center;
-	width:80%;
-	margin:0 auto;
-	padding-bottom:50px;
-	
-}
-
-#blog3 h1 {
-	padding-top:50px;
-	padding-bottom:50px;
-}
-
-#blog6, #blog7{
-	margin:0 auto;
-	font-size:20px;
-	align-items:center;
-	width:80%;
-	padding-bottom:50px;
-	text-align:center;
-	padding-top:50px;
-}
-
-#blog5 li{
-	font-size:20px;
-	margin:0 auto;
-	align-items:center;
-}
-
-#blog6 li{
-	font-size:20px;
-	margin:0 auto;
-	align-items:center;
-}
-
-#blog7 ol, ul{
-	
-    text-align: center;
-    list-style-position: inside;
-
-}
-
-#blog5 ul{
-	
-    text-align: center;
-    list-style-position: inside;
-
-}
-
-#blog3 h2{
-	font-size:20px;
-}
-
-#blog3{
-	text-align:center;
-	padding-bottom:50px;
-	width:80%;
-	margin: 0 auto;
-	font-size:20px;
-}
-
-#blog5{
-	text-align:center;
-	padding-bottom:50px;
-	padding-top:50px;
-	width:80%;
-	margin:0 auto;
-	
-}
-
-#blog5 p {
-	font-size:20px;
-}
-
-
-#blog3 p{
-	font-size:20px;
-}
-
-#blog4 p{
-	font-size:20px;
-}
-#blog4 h1{
-	padding-top:50px;
-	padding-bottom:20px;
-}
-
-#seperater{
-	height:25px;
-	width:100%;
-	background-color:#d3d3d3;
-	text-align: center;
-}
-
-#table{
-	padding-top:20px;
-}
-
-#table2 {
-	width:10%;
-	padding:0px;
-}
-
 .containertable #table3 {
 	width:90%;
-}
-
-#opinion{
-	font-size:25px;
-	text-align:center;
-	padding:15px;	
 }
 
 .containertable{
@@ -403,24 +182,6 @@ h1{
 	padding-bottom:10px;
 	height:2px;
 	margin:0px;	
-}
-
-#map iframe{
-	margin:0 auto;
-	align-items:middle;
-}
-
-#faq{
-	height:500px;
-}
-
-#faq h1{
-	padding-top:30px;
-}
-
-#faq p, h4{
-	margin-left:30px;
-	font-size:20px;
 }
 
 .containertable td{
@@ -497,9 +258,4 @@ h1{
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
 
-}
-
-#blog2 li{
-	color:black;
-	display:block;
 }

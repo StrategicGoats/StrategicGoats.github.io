@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="apple-touch-icon" sizes="57x57"
+	href="fav.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="fav.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="fav.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="fav.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="fav.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="fav.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="fav.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="fav.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="fav.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="fav.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="fav.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="fav.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="fav.ico/favicon-16x16.png">
+<link rel="manifest" href="fav.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="ai styles.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Strategic Goats - Make your own AI</title>
+</head>
+<body>
+	<div class="top" id="linkToTop"></div>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a> <a href="who are we.html">Meet the
+			Team</a> <a href="blog.html">Blog</a>
+	</div>
+
+	<!-- Use any element to open the sidenav -->
+	<span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;<font
+		color="#000000"></font>
+	</span>
+
+	<div id="ai">
+		<h1>Make your own AI</h1>
+	</div>
+	<main>
+
+	<div class="section">
+		<h4>Table of contents:</h4>
+		<ol>
+			<li><a href="#AIbasics">The basics of a Peril AI</a></li>
+			<li><a href="#AIsetup">Setting up your AI</a></li>
+			<li><a href="#AIimport">Importing your AI</a></li>
+		</ol>
+	</div>
+
+	<div class="section" id="AIbasics">
+
+		<h4>1. The basics of a Peril AI</h4>
+		<p>In peril the AIs all fundementally function the same way. Each
+			round they observe the state of the game and act based on that
+			information. They do not remmeber previous states of the game. This
+			allows each AI to play for multiple players simultaneously.</p>
+
+		<p>There are three distinct actions every AI must perform:</p>
+		<ol>
+			<li>Reinforce</li>
+			<li>Attack</li>
+			<li>Fortify</li>
+		</ol>
+		<p>The following optional operations can be performed at any point
+			during those three actions:</p>
+		<ol>
+			<li>Buying blockades</li>
+			<li>Upgrading units</li>
+		</ol>
+
+		<p>AIs query the AIController to gather information about the
+			game. Any information obtained from any other source is illegal.</p>
+	</div>
+	<div class="section" id="AIsetup">
+		<h4>2. Setting up your AI</h4>
+
+		<p>Follow these steps to setting up your own AI class.</p>
+
+		<ol>
+			<li>Open the <code>Peril.jar</code> file in a achriver such as
+				winrar.
+			</li>
+			<li>Extract <code>peril/ai</code> folder to your computer.
+			</li>
+			<li>Create a new <code>&lt;ai name&gt;.java</code> file inside <code>peril.ai</code>
+				(The file name is you AI's name).
+			</li>
+			<li>The java class should look like this...</li>
+			<pre>
+				<code>
+package peril.ai;
+
+import peril.ai.api.*;
+
+public final class &lt;ai name&gt; extends AI{
+
+	public &lt;ai name&gt;(AIController api){
+		super("&lt;ai name&gt;", MAX_SPEED, api);
+	}
+
+	@Override
+	protected AIOperation processReinforce(AIController api) {
+		
+		final AIOperation operation = new AIOperation();
+		// Reinforce logic here
+		return operation;
+	}
+
+	@Override
+	protected AIOperation processAttack(AIController api) {
+
+		final AIOperation operation = new AIOperation();
+		// Attack logic here
+		return operation;
+	}
+
+	@Override
+	protected AIOperation processFortify(AIController api) {
+
+		final AIOperation operation = new AIOperation();
+		// Fortify logic here
+		return operation;
+	}
+}
+</code>
+			</pre>
+			<li>Add the Logic for each operation. Details of each operation
+				can be found here: <a href="API doc/index.html">Peril AI API</a>. In
+				specific the documentation for the methods your AI implements.
+			</li>
+		</ol>
+
+
+
+	</div>
+
+	<div class="section" id="AIimport">
+
+		<h4>3. Importing your AI</h4>
+
+		<p>Follow these steps to import your custom AI into Peril.</p>
+
+		<ol>
+			<li>Compile your <code>&lt;ai name&gt;.java</code> file to get
+				the <code>&lt;ai name&gt;.class</code></li>
+			<li>Open the <code>Peril.jar</code> file in a achriver such as
+				winrar.
+			</li>
+			<li>Copy the <code>&lt;ai name&gt;.class</code> back into the <code>peril/ai</code>
+				inside the <code>Peril.jar</code> file.
+			</li>
+			<li>Close the <code>Peril.jar</code> file the open it again this
+				time using <code>Java</code>. This should open Peril.
+			</li>
+			<li>Set up a new game and set the players you want to be your AI
+				to have the AI <code>None</code>.
+			</li>
+			<li>Load the game.</li>
+			<li>At the earliest point possible, pause the game.</li>
+			<li>Save the game into one of the save slots, remember which
+				slot.</li>
+			<li>Open the <code>assets/maps/&lt;map name&gt;/</code> folder.
+			</li>
+			<li>Open the save .txt file.</li>
+			<li>Near the top of the file there should be this... <pre>
+				<code>
+...
+Unit,Car,5,carIcon.png
+Unit,Tank,15,tankIcon.png
+Player,1,Hard,2,0,0,0,true,0
+Player,3,Medium,0,0,0,0,true,0
+Player,4,None,0,0,0,0,true,0
+Player,2,Easy,0,0,0,0,true,0
+State,Reinforce,1,0
+Country,Ural,000200150,Soldier:1,-20,20,2
+Country,India,050000050,Soldier:1,0,0,3
+...
+</code>
+			</pre>
+			<li>Replace the <code>None</code> with your &lt;ai name&gt; and
+				save the file.
+			</li>
+			<li>Launch Peril.</li>
+			<li>Load that modified game save and your AI should be in the
+				game as the player(s) to set it to control.</li>
+		</ol>
+	</div>
+
+	</main>
+
+	<footer>
+		<div class="footer">
+			<a href="#linkToTop"><img src="images/logo.png" alt="Reset"
+				class="teamLogo"></a>
+
+			<div id="copy">
+				<p>Strategic Goats &#169;</p>
+				<p>strategicgoats@outlook.com</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop : $(hash).offset().top
+					}, 800, function() {
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+	</script>
+
+</body>
+</html>
