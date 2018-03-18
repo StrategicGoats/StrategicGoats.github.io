@@ -181,14 +181,19 @@ th{
     color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 50px;
 	margin: 0 auto;
 	border-radius: 8px;
 }
 
+#download button a{
+	text-decoration: none;
+	color: #AFFCAB;
+}
+
 #download button a:hover, .offcanvas a:focus{
-	color: #ffffff;
+	color: #FFFFFF;
 }
 
 h1{
