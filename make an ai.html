@@ -59,9 +59,10 @@
 		<div class="section">
 			<h4>Table of contents:</h4>
 			<ol>
-				<li><a href="#AIbasics">The basics of a Peril AI</a></li>
-				<li><a href="#AIsetup">Setting up your AI</a></li>
-				<li><a href="#AIimport">Importing your AI</a></li>
+				<li><a class="animate" href="#AIbasics">The basics of a
+						Peril AI</a></li>
+				<li><a class="animate" href="#AIsetup">Setting up your AI</a></li>
+				<li><a class="animate" href="#AIimport">Importing your AI</a></li>
 			</ol>
 		</div>
 
@@ -250,24 +251,28 @@ Country,India,050000050,Soldier:1,0,0,3
 			// Add smooth scrolling to all links
 			$("a").on('click', function(event) {
 
-				// Make sure this.hash has a value before overriding default behavior
-				if (this.hash !== "") {
-					// Prevent default anchor click behavior
-					event.preventDefault();
+				// If the link is to be animated.
+				if ($(event.target).attr('class') === "animate") {
 
-					// Store hash
-					var hash = this.hash;
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
 
-					// Using jQuery's animate() method to add smooth page scroll
-					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-					$('html, body').animate({
-						scrollTop : $(hash).offset().top
-					}, 800, function() {
+						// Store hash
+						var hash = this.hash;
 
-						// Add hash (#) to URL when done scrolling (default click behavior)
-						window.location.hash = hash;
-					});
-				} // End if
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+						$('html, body').animate({
+							scrollTop : $(hash).offset().top
+						}, 800, function() {
+
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					}
+				}// End if
 			});
 		});
 	</script>
