@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="apple-touch-icon" sizes="57x57"
+	href="fav.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="fav.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="fav.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="fav.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="fav.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="fav.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="fav.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="fav.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="fav.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="fav.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="fav.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="fav.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="fav.ico/favicon-16x16.png">
+<link rel="manifest" href="fav.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="map styles.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Strategic Goats - Make your own Map</title>
+</head>
+<body>
+	<div class="top" id="linkToTop"></div>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a>
+		<a href="who are we.html">Meet the Team</a>
+		<a href="make an ai.html">Make an AI</a>
+		<a href="blog.html">Blog</a>
+	</div>
+
+	<!-- Use any element to open the sidenav -->
+	<span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;<font
+		color="#000000"></font>
+	</span>
+	
+	<!-- Page title -->
+	<div id="map">
+		<h1>Make your own Map</h1>
+	</div>
+
+	<!-- Page content -->
+	<div id="main">
+
+		<!-- Page introduction -->
+		<div id="intro">
+
+			<h1>About Peril Maps</h1>
+			<p>The goal of this page is to teach you how to creat your very
+				own map and import it into Peril. It is assumed that you have access
+				to a image editor such as photoshop. Peril has been designed with
+				the easy addition of new content in mind.</p>
+
+			<p>A peril map file consists of several components. These are:</p>
+
+			<ul>
+				<li><code>normal.png</code><br> The image displayed
+					in-game during gameplay as the map which the countries are
+					overlayed onto.</li>
+				<li><code>countries.png</code><br> The image that ontains
+					solid regions of every individual country on the map.</li>
+				<li><code>default.txt</code><br>This file allows Peril to
+					interpret the image files and build the in-game map.</li>
+			</ul>
+
+			<p>
+				The
+				<code>normal.png</code>
+				and
+				<code>countries.png</code>
+				must be the same dimensions.
+			</p>
+
+		</div>
+
+		<!-- Image examples -->
+		<div id="imageFiles">
+			<p>As an example her is the Earth map image files.</p>
+
+			<!-- Normal.png -->
+			<div id="exampleNormal">
+				<h1>
+					<code>normal.png</code>
+				</h1>
+				<img src="images/earthNormal.png" style="width: 100%;" />
+
+			</div>
+
+			<!-- Countries.png -->
+			<div id="exampleCountries">
+				<h1>
+					<code>countries.png</code>
+				</h1>
+				<img src="images/earthCountries.png" style="width: 100%;" />
+			</div>
+
+			<ul>
+				<li>The regions on <code>normal.png</code> where country
+					coulors will be displayed are a blad texture to provide the
+					apperance of terrain.
+				</li>
+				<li>Each country on <code>countries.png</code> must be a
+					specific RGB colour. This will be used by the <code>default.txt</code>
+					to build the countries.
+				</li>
+				<li>Every country region on <code>countries.png</code> should
+					align perfrectly with the gap for it in the <code>normal.png</code>
+					for the best appearance.
+				</li>
+			</ul>
+		</div>
+
+		<!-- Default.txt -->
+		<div id="exampleDefault">
+
+			<!-- Info on default.txt -->
+			<div id="defaultInfo">
+				<h1>
+					<code>default.txt</code>
+				</h1>
+
+				<p>
+					Each line of the
+					<code>default.txt</code>
+					file denotes a instrcution type. This type tells Peril how to
+					interpret the line. Instructions of the same type should be grouped
+					together and these groups must be ordered in the following way in
+					order to allow the interpreter to construct the map properly. There
+					should only be spaces in a line if it is in the middle of a name.
+					Misplaces spaces will cause Peril to not interpret the Map.
+				</p>
+
+				<ol type="1">
+					<li>Unit</li>
+					<li>Country</li>
+					<li>Continent</li>
+					<li>Link</li>
+					<li>Challenge</li>
+				</ol>
+
+				<p>
+					Here is a break down of each instruction type and what each of its
+					parameters are. The parameters are displays as
+					<code>"parameter name"</code>
+					, replace this text with the value you wish to pass. Everything
+					else must stay the same.
+				</p>
+			</div>
+
+			<!-- Unit -->
+			<div id="unit">
+
+				<h2>
+					<code>Unit</code>
+				</h2>
+				<code>Unit,"Unit Name","Unit Strength","UnitIcon".png</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Unit Name"</code><br>The name of the unit.
+						This must be unique to each unit.</li>
+					<li><code>"Unit Strength"</code><br>The strength of the
+						unit relative to the other units. The weakset unit should have a
+						strength of <code>1</code>.</li>
+					<li><code>"Unit Icon"</code><br>The file name of the
+						image that will represent the unit in game. This image should be
+						in <code>/assets/ui/units</code> folder.</li>
+				</ol>
+
+			</div>
+
+			<!-- Country -->
+			<div id="country">
+				<h2>
+					<code>Country</code>
+				</h2>
+				<code>Country,"Country Name","RGB Value","Default Unit
+					Name":"Quantity","x_offset","y_offset",-</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Country Name"</code><br>The name of the
+						country. This must be unique to each country.</li>
+					<li><code>"RGB Value"</code><br>The RGB value of the
+						colour that country in the <code>countries.png</code> file. The
+						RGB is in the form RRRGGGBBB where each component is a 0 - 255
+						value. Example: 223345789</li>
+					<li><code>"Default Unit Name"</code><br>The default unit
+						that every country will have to start of with.</li>
+					<li><code>"Quantity"</code><br>The number of the default
+						unit you want the country to start with.</li>
+					<li><code>"x_offset"</code><br>The horizontal pixel
+						vector from the center of the country that the army will be
+						displayed over the country.</li>
+					<li><code>"y_offset"</code><br>The vertical pixel vector
+						from the center of the country that the army will be displayed
+						over the country.</li>
+				</ol>
+
+			</div>
+
+			<!-- Continent -->
+			<div id="continent">
+
+				<h2>
+					<code>Continent</code>
+				</h2>
+				<code>Continent,"Continent Name","Environmental Hazard
+					Name","List Of Countries In Continent"</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Continent Name"</code><br>The name of the
+						group countries.</li>
+					<li><code>"Environmental Hazard Name"</code><br>The name
+						of the environmental hazard that will occur on the countries in
+						this continent. They are as follows:
+						<ul>
+							<li><code>Hurricane</code></li>
+							<li><code>Tornado</code></li>
+							<li><code>Tsunami</code></li>
+							<li><code>Volcanic Eruption</code></li>
+						</ul> You must pick one!</li>
+					<li><code>"List Of Countries In Continent"</code><br>A
+						list of all the countries in the continent seperated by a '-'.
+						Every country that is in the game should be in one continent.</li>
+				</ol>
+
+			</div>
+
+			<!-- Link -->
+			<div id="link">
+
+				<h2>
+					<code>Link</code>
+				</h2>
+				<code>Link,"Country Source","Country Destination","Default
+					State","Current State","Duration"</code>
+				<p>Links are uni-directional and must be specified in both
+					directions.</p>
+				<p>Link states are as follows:</p>
+				<ul>
+					<li><code>Open</code></li>
+					<li><code>Blockade</code></li>
+				</ul>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Country Source"</code><br>The name of the
+						country that the link is from.</li>
+					<li><code>"Country Destination"</code><br>The name of the
+						country that the link is to.</li>
+					<li><code>"Default State"</code><br>The link state that
+						this link will return to after any change that has been made to it
+						expires.</li>
+					<li><code>"Current State"</code><br>The current state of
+						the link.</li>
+					<li><code>"Duration"</code><br>The number of rounds
+						before the link returns back to its default state. If it is in its
+						default state then this should be <code>0</code>.</li>
+				</ol>
+
+			</div>
+
+			<!-- Army Size challenge -->
+			<div id="armySize">
+
+				<h2>
+					<code>ArmySize</code>
+				</h2>
+				<code>ArmySize,"Goal","Reward"</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Goal"</code><br>The strength of all the
+						countries' armries that a player owns that when combined will
+						trigger this challenge to be completed.</li>
+					<li><code>"Reward"</code><br>The number of points that
+						the player will recieve for completing this army size challenge.</li>
+				</ol>
+
+			</div>
+
+			<!-- Countries owned challenge -->
+			<div id="countriesOwned">
+
+				<h2>
+					<code>CountriesOwned</code>
+				</h2>
+				<code>CountriesOwned,"Goal","Reward"</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Goal"</code><br>The number of countries that a
+						single player must own to complete this challenge.</li>
+					<li><code>"Reward"</code><br>The number of points that
+						the player will recieve for completing this countries owned
+						challenge.</li>
+				</ol>
+
+			</div>
+
+			<!-- Units killed challenge -->
+			<div id="unitsKilled">
+
+				<h2>
+					<code>UnitsKilled</code>
+				</h2>
+				<code>UnitsKilled,"Goal","Reward"</code>
+				<p>Parameter descriptions:</p>
+				<ol type="1">
+					<li><code>"Goal"</code><br>The number of units that have
+						been killed as a result of this players attacks that is required
+						to trigger this challenge to be completed.</li>
+					<li><code>"Reward"</code><br>The number of points that
+						the player will recieve for completing this units killed
+						challenge.</li>
+				</ol>
+
+			</div>
+
+			<div id="import">
+
+				<h1>Importing the Map</h1>
+
+				<p>
+					Place these 3 files in a folder with the name of the map. This
+					folder should then be placed in
+					<code>/assets/maps</code>
+					. Add the map name and dimensions to
+					<code>Maps.txt</code>
+					. These dimensions should be the dimensions of the
+					<code>normal.png</code>
+					image. Once you have followed all these steps your map will now be
+					selectable from the main menu.
+				</p>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+	<!-- Page footer -->
+	<footer>
+		<div class="footer">
+			<a href="#linkToTop"><img src="images/logo.png" alt="Reset"
+				class="teamLogo animate"></a>
+
+			<div id="copy">
+				<p>Strategic Goats &#169;</p>
+				<p>strategicgoats@outlook.com</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Page functions -->
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+
+		$(document).ready(function() {
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+
+				// If the link is to be animated.
+				if ($(event.target).hasClass('animate')) {
+
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
+
+						// Store hash
+						var hash = this.hash;
+
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+						$('html, body').animate({
+							scrollTop : $(hash).offset().top
+						}, 800, function() {
+
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					}
+				}// End if
+			});
+		});
+	</script>

@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@font-face{
+	font-family: "caviarDreamsBold";
+	src: url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.eot");
+	src: 
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.woff")format("woff"),
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.svg")format("svg"),
+	url("caviar_dreams_bold/Caviar_Dreams_Bold/CaviarDreams_Bold.otf")format("otf");
+
+}
+
+body{
+	margin: 0 auto;
+	background-color:#FFF;
+	font-family: 'caviarDreamsBold', Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+nav{
+	height:50px;
+	position:relative;
+	z-index: 1;
+	width:100%;
+	vertical-align:top;
+	margin: 0 auto;	
+}
+
+li {
+	padding-right:10px;
+}
+
+h2{
+	text-align:center;
+	position:center;
+	color: black;
+}
+
+img { 
+   position: relative; 
+   width: 100%; 
+}
+ 
+.footer{
+	
+	background-color:#383838;
+	width:100%;
+	color:white;
+}
+
+.footer #copy p{
+	padding-top:5px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    color:black;
+}
+	
+footer #copy{
+	text-align: center;
+	height:80px;	
+}
+
+#exampleNormal{
+	float: left;
+	width: 50%;
+	height:100;
+}
+
+#exampleCountries{
+	float: right;
+	width: 50%;
+	height:100;
+}
+
+h2{
+	text-align:center;
+}
+
+h1{
+	text-align:center;
+}
+
+#map{
+	height:600px;
+	width:100%;
+	background-image:url("images/battle.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	line-height:600px;
+	vertical-align:middle;
+	text-align:center;
+	color:white;
+	font-size:35px;
+}
+
+
+.teamLogo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px; 
+    height: 80px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #ff0000;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Zoom In #1 */
+.hover01 div img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 div:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+
+}
