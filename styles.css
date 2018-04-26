@@ -18,11 +18,14 @@ body{
 	background-color:#FFF;
 	font-family: 'caviarDreamsBold', Helvetica Neue,Helvetica,Arial,sans-serif;
 }
+#nomination{
+	color: white;
+}
 
 #intro {
 	color: #255;
 	margin: 0 auto;
-	height:700px;
+	height:100%;
 	width:100%;
 	background-image: url("images/world.jpg");
 	background-attachment: fixed;
